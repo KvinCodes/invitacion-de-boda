@@ -31,6 +31,7 @@ body {
     background-size: cover;
     background-position: top center;
     margin: 20px auto; /* Asegurar margen en pantallas pequeñas */
+    border-radius: 10px; /* Bordes redondeados */
 }
 
 
@@ -96,6 +97,42 @@ h2 {
     font-size: 2em;
     margin-bottom: 10px;
 }
+
+/* Ocultar el reproductor original */
+#audio-control {
+    width: 60px;
+    height: 60px;
+    background-color: #edcfb6;
+    border: 2px solid #eeb99a;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#audio-control::before {
+    content: '▶'; /* Icono inicial: reproducir */
+    font-family: Arial, sans-serif;
+    display: block;
+    line-height: 1;
+}
+
+#audio-control.paused::before {
+    content: '❚❚'; /* Icono de pausa */
+    font-family: Arial, sans-serif;
+}
+
+#audio-control:hover {
+    background-color: #eeb99a; /* Cambia el color al pasar el ratón */
+}
+
 
 .footer {
     margin-top: 40px;

@@ -25,3 +25,17 @@
 
     // Mostrar la fecha exacta de la boda
     document.getElementById("wedding-date").innerHTML = "Día de la boda: Domingo, 29 de Diciembre, 2024";
+
+
+    // Reproducir el audio cuando se presione el botón
+    document.getElementById('audio-control').addEventListener('click', function() {
+        var audio = document.getElementById('wedding-audio');
+        if (audio.paused) {
+            audio.play();
+            this.classList.add('paused');
+        } else {
+            audio.pause();
+            this.classList.remove('paused');
+        }
+    });
+    

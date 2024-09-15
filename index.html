@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/ico"sizes="32x32" href="img/favicon.ico">
+</head>
+<body>
+
+<div class="invitation-wrapper">
+    <div class="invitation">
+        <h3>Nuestra Boda</h3>
+        <h1 class="couple">Mitchel & Carlos</h1>
+        <!-- <img src="img/boda.jpg" alt="Boda" width="500" height="600"> -->
+        <p>Con nuestro amor, y con la presencia de Dios entre nosotros y la bendición de nuestros padres, 
+            presentamos nuestro amor ante el Señor y deseamos compartir la alegría de nuestra unión matrimonial 
+            invitándolos a la ceremonia.</p>
+
+        <!-- Sección de cuenta regresiva -->
+        <div class="countdown" id="countdown"></div>
+        <p id="wedding-date"></p>
+
+        <div class="details">
+            <div>
+                <div class="icon"><img src="img/anillo-de-bodas.png" alt="Anillo de Bodas" width="40" height="40"></div>
+                <div>
+                    <audio src="audio/boda.mp3" controls></audio>
+                </div>
+                <h2>Ceremonia y Recepción</h2>
+                <p>Calle José Martí, #7, <br> Colonia Escalón San Salvador CP, <br> San Salvador CP 1101 <br> Domingo, 29 de Diciembre <br> 16:00 PM</p>
+                <!-- Botón para Google Maps -->
+                <button onclick="window.open('https://maps.app.goo.gl/JFx4z8628YiJ4oCJ7', '_blank')">Ver en Google Maps</button>
+            </div>
+            
+        </div>
+
+        <!-- Botón de confirmación de asistencia -->
+        <div class="footer">
+            <p class="verse">Confirma tu asistencia aquí:</p>
+            <button class="highlight" onclick="window.open('https://tu-formulario.com/asistencia', '_blank')">Confirmar Asistencia</button>
+        </div>
+        
+        <p class="verse">"El amor jamás dejará de existir." <br> - Corintios 13:8</p>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

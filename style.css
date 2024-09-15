@@ -5,10 +5,10 @@ body {
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh; /* Cambiar a min-height */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Cambiar center a flex-start para evitar el corte superior */
 }
 
 .invitation-wrapper {
@@ -17,24 +17,38 @@ body {
     align-items: center;
     height: 100%;
     width: 100%;
+    padding-top: 20px; /* Agregar un poco de espacio superior */
 }
 
 .invitation {
     width: 800px;
-    padding: 40px;
+    padding: 60px 40px; /* Aumentar el padding superior para evitar el corte */
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    background-image: url('img/fondo2.jpeg'); /* Agrega tu imagen de fondo */
+    background-image: url('img/fondo2.jpeg'); /* Fondo de la invitación */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
+    margin: 20px auto; /* Asegurar margen en pantallas pequeñas */
 }
+
 
 h1 {
     font-family: 'Great Vibes', cursive;
     font-size: 3.5em;
     margin: 10px 0;
+}
+
+.couple-photo {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 45px auto;
+    display: block;
+    border: 8px solid #edcfb6; /* Marco acorde a los colores del diseño */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 10px; /* Bordes redondeados */
 }
 
 h3 {
@@ -52,6 +66,7 @@ h3 {
 p {
     font-size: 1.2em;
     color: #2e2c2c;
+    margin-top: px;
 }
 
 .verse {
@@ -211,3 +226,7 @@ button:hover {
         margin-top: 20px;
     }
 }
+
+
+
+

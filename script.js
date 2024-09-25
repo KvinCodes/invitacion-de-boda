@@ -1,3 +1,4 @@
+
 // Botón de reproducción y pausa del reproductor de música
 const tituloCancion = document.querySelector(".reproductor-musica h1");
 const nombreCancion = document.querySelector(".reproductor-musica p");
@@ -64,9 +65,9 @@ cancion.addEventListener("loadedmetadata", function() {
     duracionTotal.innerHTML = `${duracionMinutos}:${duracionSegundos < 10 ? '0' : ''}${duracionSegundos}`; // Formato mm:ss
 });
 
-window.addEventListener("load", function() {
-    reproducirCancion();
-});
+// window.addEventListener("load", function() {
+//     reproducirCancion();
+// });
 
 botonReproducirPausar.addEventListener("click", reproducirPausar);
 
@@ -108,3 +109,19 @@ progreso.addEventListener("input", function() {
 progreso.addEventListener("change", function() {
     reproducirCancion();
 });
+
+// Mostrar el popup al cargar la página
+window.onload = function() {
+    const popup = document.getElementById("popup");
+    popup.style.display = "flex"; // Asegúrate de que se muestre
+
+    document.getElementById("abrir-invitacion").addEventListener("click", function() {
+        // Agregar clase para el efecto de cierre
+        popup.classList.add("popup-hidden");
+
+        // Esperar el tiempo de animación antes de ocultar completamente
+        setTimeout(() => {
+            popup.style.display = "none";
+        }, 500); // Tiempo que coincide con el tiempo de la transición
+    });
+};

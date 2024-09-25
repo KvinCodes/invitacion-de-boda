@@ -59,10 +59,6 @@ cancion.addEventListener("loadedmetadata", function() {
     progreso.max = cancion.duration;
     progreso.value = cancion.currentTime;
 
-    window.addEventListener("load", function() {
-        reproducirCancion();
-    });
-
     // Actualiza la duración total
     const duracionMinutos = Math.floor(cancion.duration / 60);
     const duracionSegundos = Math.floor(cancion.duration % 60);

@@ -26,16 +26,67 @@
     // Mostrar la fecha exacta de la boda
     document.getElementById("wedding-date").innerHTML = "Día de la boda: Domingo, 29 de Diciembre, 2024";
 
+    // Botón de reproducción y pausa del reproductor de música
+    const tituloCancion = document.querySelector(".reproductor-musica h1");
+    const nombreCancion = document.querySelector(".reproductor-musica p");
 
-    // Reproducir el audio cuando se presione el botón
-    document.getElementById('audio-control').addEventListener('click', function() {
-        var audio = document.getElementById('wedding-audio');
-        if (audio.paused) {
-            audio.play();
-            this.classList.add('paused');
+    const progreso = document.getElementById("progreso");
+    const cancion = document.getElementById("cancion");
+
+    const iconoControl = document.getElementById("iconoControl");
+    const botonReproducirPausar = document.querySelector(".controles .boton-reproducir-pausar");
+
+    const canciones = [
+        {
+            titulo: "Thinking Out Loud",
+            nombre: "Ed Sheeran",
+            url: "audio/Ed Sheeran - Thinking out Loud.mp3"
+        },
+    ];
+
+    canciones.forEach(cancion => {
+        tituloCancion.innerHTML = cancion.titulo;
+        nombreCancion.innerHTML = cancion.nombre;
+        cancion.src = cancion.fuente;
+    });
+
+    cancion.addEventListener("loadedmetadata", function() {
+        progreso.max = cancion.duration;
+        progreso.value = cancion.currentTime;
+    });
+
+    botonReproducirPausar.addEventListener("click", reproducirPausar);
+
+    function reproducirPausar() {
+        if (cancion.paused) {
+            reproducirCancion();
         } else {
-            audio.pause();
-            this.classList.remove('paused');
+            pausarCancion();
+        }
+    };
+
+    function reproducirCancion() {
+        cancion.play();
+        iconoControl.classList.add("bi-pause-fill");
+        iconoControl.classList.remove("bi-play-fill");
+    }
+
+    function pausarCancion() {
+        cancion.pause();
+        iconoControl.classList.remove("bi-pause-fill");
+        iconoControl.classList.add("bi-play-fill");
+    }
+
+    cancion.addEventListener("timeupdate", function() {
+        if(!cancion.paused) {
+            progreso.value = cancion.currentTime;
         }
     });
-    
+
+    progreso.addEventListener("input", function() {
+        cancion.currentTime = progreso.value;
+    });
+
+    progreso.addEventListener("change", function() {
+        reproducirCancion();
+    });

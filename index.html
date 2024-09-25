@@ -23,13 +23,20 @@
         <p id="wedding-date"></p>
 
         <div class="details">
-            <div>
-
-                <div>
-                    <audio id="wedding-audio" src="audio/boda.mp3" autoplay loop></audio>
-                    <button id="audio-control" class="audio-button"></button>
+            <div class="reproductor-musica">
+                <h1>Título</h1>
+                <p>Nombre</p>
+                <audio id="cancion">
+                    <source src="audio/Ed Sheeran - Thinking out Loud.mp3" type="audio/mpeg">
+                </audio>
+                <input type="range" value="0" id="progreso"/>
+                <div class="controles control"> 
+                    <button class="boton-reproducir-pausar iconoControl">
+                        <i class="bi bi-play-fill" id="iconoControl"></i>
+                    </button>
                 </div>
-
+            </div>
+            <div>
                 <div class="icon"><img src="img/anillo-de-bodas.png" alt="Anillo de Bodas" width="40" height="40"></div>
                 
                 <h2>Ceremonia y Recepción</h2>

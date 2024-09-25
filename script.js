@@ -57,14 +57,15 @@ cancion.addEventListener("loadedmetadata", function() {
     progreso.max = cancion.duration;
     progreso.value = cancion.currentTime;
 
-    window.addEventListener("load", function() {
-        reproducirCancion();
-    });
 
     // Actualiza la duración total
     const duracionMinutos = Math.floor(cancion.duration / 60);
     const duracionSegundos = Math.floor(cancion.duration % 60);
     duracionTotal.innerHTML = `${duracionMinutos}:${duracionSegundos < 10 ? '0' : ''}${duracionSegundos}`; // Formato mm:ss
+});
+
+window.addEventListener("load", function() {
+    reproducirCancion();
 });
 
 botonReproducirPausar.addEventListener("click", reproducirPausar);

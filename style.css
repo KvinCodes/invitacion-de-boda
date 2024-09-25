@@ -90,6 +90,7 @@ p {
 .details div {
     width: 40%;
 }
+
 /* Estilo del reproductor de música */
 .reproductor-musica {
     width: 380px;
@@ -119,7 +120,7 @@ p {
     height: 5px;
     background: rgba(165, 165, 165, 0.4);
     border-radius: 4px;
-    margin: 32px 0 24px;
+    margin: 15px 0 20px;
     cursor: pointer;
     margin-bottom: 0;
 }
@@ -134,6 +135,23 @@ p {
     box-shadow: 0 6px 10px rgba(228, 228, 228, 0.3);
 }
 
+.reproductor-musica .tiempos {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between; /* Espaciado entre los dos tiempos */
+    margin-top: 10px; /* Espacio entre la barra y los tiempos */
+    margin-bottom: 0;
+    font-size: 0.9rem; /* Tamaño del texto */
+    color: #333; /* Color del texto */
+}
+
+#tiempoActual, #duracionTotal {
+    /* width: 50%; Cada tiempo ocupa la mitad del espacio */
+    text-align: center; /* Centrar el texto */
+}
+
+
 .controles button{
     aspect-ratio: 1/1;
     margin-bottom: 40px;
@@ -144,6 +162,10 @@ p {
     outline: 0;
     font-size: 1.8rem;
     transition: all 0.1s linear;
+}
+
+.boton-reproducir-pausar {
+    margin-top: 0;
 }
 
 .boton-reproducir-pausar:hover{

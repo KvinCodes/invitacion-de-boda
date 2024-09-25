@@ -18,7 +18,7 @@ body {
     align-items: center;
     height: 100%;
     width: 100%;
-    padding-top: 20px; /* Agregar un poco de espacio superior */
+    padding: 10px; /* Agregar un poco de espacio superior */
 }
 
 .invitation {

@@ -65,10 +65,6 @@ cancion.addEventListener("loadedmetadata", function() {
     duracionTotal.innerHTML = `${duracionMinutos}:${duracionSegundos < 10 ? '0' : ''}${duracionSegundos}`; // Formato mm:ss
 });
 
-// window.addEventListener("load", function() {
-//     reproducirCancion();
-// });
-
 botonReproducirPausar.addEventListener("click", reproducirPausar);
 
 function reproducirPausar() {

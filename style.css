@@ -6,10 +6,12 @@ body {
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
-    min-height: 100vh; /* Cambiar a min-height */
+    min-height: 100vh;
+    /* Cambiar a min-height */
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Cambiar center a flex-start para evitar el corte superior */
+    align-items: flex-start;
+    /* Cambiar center a flex-start para evitar el corte superior */
 }
 
 .invitation-wrapper {
@@ -18,21 +20,26 @@ body {
     align-items: center;
     height: 100%;
     width: 100%;
-    padding: 10px; /* Agregar un poco de espacio superior */
+    padding: 10px;
+    /* Agregar un poco de espacio superior */
 }
 
 .invitation {
     width: 800px;
-    padding: 60px 40px; /* Aumentar el padding superior para evitar el corte */
+    padding: 60px 40px;
+    /* Aumentar el padding superior para evitar el corte */
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    background-image: url('img/fondo2.jpeg'); /* Fondo de la invitación */
+    background-image: url('img/fondo2.jpeg');
+    /* Fondo de la invitación */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
-    margin: 20px auto; /* Asegurar margen en pantallas pequeñas */
-    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px auto;
+    /* Asegurar margen en pantallas pequeñas */
+    border-radius: 10px;
+    /* Bordes redondeados */
 }
 
 
@@ -48,9 +55,11 @@ h1 {
     height: auto;
     margin: 45px auto;
     display: block;
-    border: 8px solid #edcfb6; /* Marco acorde a los colores del diseño */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    border-radius: 10px; /* Bordes redondeados */
+    border: 8px solid #edcfb6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    border-radius: 10px;
+    /* Bordes redondeados */
     transition: all 0.3s ease;
 }
 
@@ -140,20 +149,26 @@ p {
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: space-between; /* Espaciado entre los dos tiempos */
-    margin-top: 10px; /* Espacio entre la barra y los tiempos */
+    justify-content: space-between;
+    /* Espaciado entre los dos tiempos */
+    margin-top: 10px;
+    /* Espacio entre la barra y los tiempos */
     margin-bottom: 0;
-    font-size: 0.9rem; /* Tamaño del texto */
-    color: #333; /* Color del texto */
+    font-size: 0.9rem;
+    /* Tamaño del texto */
+    color: #333;
+    /* Color del texto */
 }
 
-#tiempoActual, #duracionTotal {
+#tiempoActual,
+#duracionTotal {
     /* width: 50%; Cada tiempo ocupa la mitad del espacio */
-    text-align: center; /* Centrar el texto */
+    text-align: center;
+    /* Centrar el texto */
 }
 
 
-.controles button{
+.controles button {
     aspect-ratio: 1/1;
     margin-bottom: 40px;
     background-color: transparent;
@@ -169,11 +184,11 @@ p {
     margin-top: 0;
 }
 
-.boton-reproducir-pausar:hover{
+.boton-reproducir-pausar:hover {
     background-color: transparent;
 }
 
-.controles .iconoControl:hover{
+.controles .iconoControl:hover {
     transform: scale(1.2);
 }
 
@@ -216,7 +231,8 @@ button:hover {
 }
 
 .highlight {
-    background-color: #edcfb6; /* Color rojo para destacar */
+    background-color: #edcfb6;
+    /* Color rojo para destacar */
 }
 
 .highlight:hover {
@@ -238,7 +254,8 @@ button:hover {
 }
 
 .details .icon {
-    margin-bottom: 5px; /* Ajuste del margen entre icono y texto */
+    margin-bottom: 5px;
+    /* Ajuste del margen entre icono y texto */
 }
 
 /* Responsividad */
@@ -248,11 +265,16 @@ button:hover {
         padding: 20px;
     }
 
+    .couple-photo {
+        width: 90%;
+    }
+
     h1 {
         font-size: 2.5em;
     }
 
-    p, .verse {
+    p,
+    .verse {
         font-size: 1em;
     }
 
@@ -294,7 +316,8 @@ button:hover {
         font-size: 2.5em;
     }
 
-    p, .verse {
+    p,
+    .verse {
         font-size: 0.9em;
     }
 
@@ -315,6 +338,7 @@ button:hover {
     .invitation {
         margin-top: 20px;
     }
+
 }
 
 /* Estilos del popup */
@@ -349,10 +373,17 @@ button:hover {
 /* Efecto de cierre */
 .popup-hidden {
     opacity: 0;
-    transform: translateX(100%); /* Desplazar hacia la derecha */
+    transform: translateX(100%);
+    /* Desplazar hacia la derecha */
 }
 
-
-
-
-
+/* Estilo para la sección de recomendaciones */
+.evento-info {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(237, 207, 182, 0.3); /* Fondo suave */
+    border-left: 5px solid #edcfb6; /* Borde izquierdo */
+    font-size: 1.1em;
+    color: #333;
+    border-radius: 8px;
+}

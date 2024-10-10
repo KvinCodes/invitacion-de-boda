@@ -17,7 +17,7 @@ const duracionTotal = document.getElementById("duracionTotal");
 const weddingDate = new Date("December 29, 2024 16:00:00").getTime();
 
 // Actualizar la cuenta regresiva cada segundo
-const countdownFunction = setInterval(function() {
+const countdownFunction = setInterval(function () {
     const now = new Date().getTime();
     const distance = weddingDate - now;
 
@@ -55,7 +55,7 @@ canciones.forEach(cancion => {
     cancion.src = cancion.url; // Asegúrate de usar `url` en lugar de `fuente`
 });
 
-cancion.addEventListener("loadedmetadata", function() {
+cancion.addEventListener("loadedmetadata", function () {
     progreso.max = cancion.duration;
     progreso.value = cancion.currentTime;
 
@@ -87,7 +87,7 @@ function pausarCancion() {
     iconoControl.classList.add("bi-play-fill");
 }
 
-cancion.addEventListener("timeupdate", function() {
+cancion.addEventListener("timeupdate", function () {
     if (!cancion.paused) {
         progreso.value = cancion.currentTime;
 
@@ -98,20 +98,20 @@ cancion.addEventListener("timeupdate", function() {
     }
 });
 
-progreso.addEventListener("input", function() {
+progreso.addEventListener("input", function () {
     cancion.currentTime = progreso.value;
 });
 
-progreso.addEventListener("change", function() {
+progreso.addEventListener("change", function () {
     reproducirCancion();
 });
 
 // Mostrar el popup al cargar la página
-window.onload = function() {
+window.onload = function () {
     const popup = document.getElementById("popup");
     popup.style.display = "flex"; // Asegúrate de que se muestre
 
-    document.getElementById("abrir-invitacion").addEventListener("click", function() {
+    document.getElementById("abrir-invitacion").addEventListener("click", function () {
         // Agregar clase para el efecto de cierre
         popup.classList.add("popup-hidden");
 
@@ -121,4 +121,10 @@ window.onload = function() {
         }, 500); // Tiempo que coincide con el tiempo de la transición
     });
 };
+
+// Botón para guardar en calendario
+document.getElementById('calendar-btn').addEventListener('click', function () {
+    window.open('https://www.google.com/calendar/render?action=TEMPLATE&text=Boda+de+Mitchel+y+Carlos&dates=20241229T160000Z/20241229T190000Z&details=Te+invitamos+a+nuestra+boda!&location=Calle+José+Martí,+Colonia+Escalón+San+Salvador', '_blank');
+});
+
 

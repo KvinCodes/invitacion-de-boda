@@ -114,6 +114,9 @@ window.onload = function () {
     document.getElementById("abrir-invitacion").addEventListener("click", function () {
         // Agregar clase para el efecto de cierre
         popup.classList.add("popup-hidden");
+        cancion.play();
+        iconoControl.classList.add("bi-pause-fill");
+        iconoControl.classList.remove("bi-play-fill");
 
         // Esperar el tiempo de animación antes de ocultar completamente
         setTimeout(() => {

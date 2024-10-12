@@ -14,7 +14,7 @@ const tiempoActual = document.getElementById("tiempoActual");
 const duracionTotal = document.getElementById("duracionTotal");
 
 // Fecha de la boda
-const weddingDate = new Date("December 29, 2024 16:00:00").getTime();
+const weddingDate = new Date("11 October, 2024 19:35:00").getTime();
 
 // Actualizar la cuenta regresiva cada segundo
 const countdownFunction = setInterval(function () {
@@ -33,7 +33,7 @@ const countdownFunction = setInterval(function () {
     // Si la cuenta regresiva termina
     if (distance < 0) {
         clearInterval(countdownFunction);
-        document.getElementById("countdown").innerHTML = "¡Ya es el día de la boda!";
+        document.getElementById("countdown").innerHTML = "¡Hoy es el día de la boda!";
     }
 }, 1000);
 
@@ -52,7 +52,7 @@ const canciones = [
 canciones.forEach(cancion => {
     tituloCancion.innerHTML = cancion.titulo;
     nombreCancion.innerHTML = cancion.nombre;
-    cancion.src = cancion.url; // Asegúrate de usar `url` en lugar de `fuente`
+    cancion.src = cancion.url;
 });
 
 cancion.addEventListener("loadedmetadata", function () {

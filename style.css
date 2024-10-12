@@ -378,11 +378,11 @@ button:hover {
 }
 
 /* Estilo para la sección de recomendaciones */
-.evento-info {
+.event-info {
     margin-top: 20px;
     padding: 15px;
-    background-color: rgba(237, 207, 182, 0.3); /* Fondo suave */
-    border-left: 5px solid #edcfb6; /* Borde izquierdo */
+    background-color: rgba(237, 207, 182, 0.2); /* Fondo suave */
+    /* border-left: 5px solid #edcfb6; Borde izquierdo */
     font-size: 1.1em;
     color: #333;
     border-radius: 8px;

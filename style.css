@@ -381,7 +381,7 @@ button:hover {
 .event-info {
     margin-top: 20px;
     padding: 15px;
-    background-color: rgba(237, 207, 182, 0.2); /* Fondo suave */
+    background-color: rgba(237, 207, 182, 0.2);
     /* border-left: 5px solid #edcfb6; Borde izquierdo */
     font-size: 1.1em;
     color: #333;

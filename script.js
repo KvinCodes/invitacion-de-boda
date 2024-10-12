@@ -14,7 +14,7 @@ const tiempoActual = document.getElementById("tiempoActual");
 const duracionTotal = document.getElementById("duracionTotal");
 
 // Fecha de la boda
-const weddingDate = new Date("11 October, 2024 19:35:00").getTime();
+const weddingDate = new Date("December 29, 2024 16:00:00").getTime();
 
 // Actualizar la cuenta regresiva cada segundo
 const countdownFunction = setInterval(function () {
@@ -33,7 +33,7 @@ const countdownFunction = setInterval(function () {
     // Si la cuenta regresiva termina
     if (distance < 0) {
         clearInterval(countdownFunction);
-        document.getElementById("countdown").innerHTML = "¡Hoy es el día de la boda!";
+        document.getElementById("countdown").innerHTML = "¡Gracias por ser parte del comienzo nuestra historia!";
     }
 }, 1000);
 

@@ -308,17 +308,18 @@ button:hover {
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 2em;
-    }
-
     .couple {
-        font-size: 2.5em;
+        font-size: 2.9em;
     }
 
     p,
     .verse {
-        font-size: 0.9em;
+        padding-bottom: 5px;
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1.7em;
     }
 
     .details div {
@@ -327,11 +328,11 @@ button:hover {
 
     button {
         padding: 8px 16px;
-        font-size: 0.9em;
+        font-size: 1.2em;
     }
 
     .countdown {
-        font-size: 1.2em;
+        font-size: 1.6em;
     }
 
     /* Ajustar margen superior en pantallas muy pequeñas */
@@ -342,40 +343,169 @@ button:hover {
 }
 
 /* Estilos del popup */
-.popup {
+.envelope {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
+    background-color: #f5f5f0;
+    /* Similar to the envelope color */
     display: flex;
-    justify-content: center;
     align-items: center;
-    opacity: 1;
-    transition: opacity 1s ease, transform 0.5s ease;
+    justify-content: center;
     z-index: 1000;
+    overflow: hidden;
 }
 
-.popup-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    border: 5px solid #edcfb6;
+.desktop-left {
+    display: none;
 }
 
-.popup-content h2 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 2.5em;
+.desktop-right {
+    display: none;
 }
 
-/* Efecto de cierre */
-.popup-hidden {
+.envelope-right {
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    transition: transform 1.9s ease;
+}
+
+.envelope-left {
+    position: absolute;
+    width: 140%;
+    height: 100%;
+    transition: transform 1.9s ease;
+}
+
+.envelope-left {
+    left: 0;
+}
+
+.envelope-right {
+    right: 0;
+}
+
+.open-btn {
+    position: absolute;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 2;
+    background: none;
+    animation: pulse 2.2s infinite;
+}
+
+/* Efecto de pulsación */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Estilo del mensaje flotante */
+.delayed-tooltip {
+    display: block;
     opacity: 0;
-    transform: translateX(100%);
-    /* Desplazar hacia la derecha */
+    position: absolute;
+    top: -10px;
+    left: 52%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    animation: fadeIn 0.5s ease-in-out 2s forwards;
+    /* Animación con retraso */
 }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.open-btn:hover .tooltip {
+    display: block;
+}
+
+.open-btn img {
+    width: 40%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.open-btn:hover {
+    background-color: transparent;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Opening animation */
+.opened .envelope-left {
+    transform: translateX(-100%);
+}
+
+.opened .envelope-right {
+    transform: translateX(100%);
+}
+
+@media (min-width: 768px) {
+    .envelope-right {
+        display: none;
+    }
+
+    .envelope-left {
+        display: none;
+    }
+
+    .desktop-left {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+    }
+
+    .desktop-right {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+    }
+
+    .desktop-left {
+        background-image: url('img/escritorio-izquierda.png');
+    }
+
+    .desktop-right {
+        background-image: url('img/escritorio-derecha.png');
+    }
+}
+
+
 
 /* Estilo para la sección de recomendaciones */
 .event-info {

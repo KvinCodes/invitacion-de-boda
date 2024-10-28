@@ -33,12 +33,12 @@ const countdownFunction = setInterval(function () {
     // Si la cuenta regresiva termina
     if (distance < 0) {
         clearInterval(countdownFunction);
-        document.getElementById("countdown").innerHTML = "¡Gracias por ser parte del comienzo nuestra historia!";
+        document.getElementById("countdown").innerHTML = "¡Gracias por ser parte del comienzo de nuestra historia!";
     }
 }, 1000);
 
 // Mostrar la fecha exacta de la boda
-document.getElementById("wedding-date").innerHTML = "Día de la boda: Domingo, 29 de Diciembre, 2024";
+document.getElementById("wedding-date").innerHTML = "Día de la boda: Domingo, 29 de Diciembre, 2024 <br> 04:00 PM";
 
 const canciones = [
     {
@@ -107,23 +107,20 @@ progreso.addEventListener("change", function () {
 });
 
 // Mostrar el popup al cargar la página
-window.onload = function () {
-    const popup = document.getElementById("popup");
-    popup.style.display = "flex"; // Asegúrate de que se muestre
-
-    document.getElementById("abrir-invitacion").addEventListener("click", function () {
-        // Agregar clase para el efecto de cierre
-        popup.classList.add("popup-hidden");
-        cancion.play();
+document.getElementById("open-button").addEventListener("click", function() {
+    // Add the "opened" class to trigger the opening animation
+    document.getElementById("envelope-popup").classList.add("opened");
+    cancion.play();
         iconoControl.classList.add("bi-pause-fill");
         iconoControl.classList.remove("bi-play-fill");
-
-        // Esperar el tiempo de animación antes de ocultar completamente
-        setTimeout(() => {
-            popup.style.display = "none";
-        }, 500); // Tiempo que coincide con el tiempo de la transición
-    });
-};
+    
+    // Wait for the animation to complete before showing the main content
+    setTimeout(() => {
+      document.getElementById("envelope-popup").style.display = "none";
+      document.getElementById("main-content").classList.remove("hidden");
+      document.body.style.overflow = "auto"; // Allow scrolling after pop-up
+    }, 1200); // Animation duration in CSS
+  });
 
 // Botón para guardar en calendario
 document.getElementById('calendar-btn').addEventListener('click', function () {

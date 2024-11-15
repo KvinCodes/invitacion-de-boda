@@ -38,7 +38,7 @@ const countdownFunction = setInterval(function () {
 }, 1000);
 
 // Mostrar la fecha exacta de la boda
-document.getElementById("wedding-date").innerHTML = "Día de la boda: Domingo, 29 de Diciembre, 2024 <br> 04:00 PM";
+document.getElementById("wedding-date").innerHTML = "<strong>Día de la boda: Domingo, 29 de Diciembre, 2024 <br> 04:00 PM</strong>";
 
 const canciones = [
     {

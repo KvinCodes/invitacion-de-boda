@@ -42,13 +42,6 @@ body {
     /* Bordes redondeados */
 }
 
-
-h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 3.5em;
-    margin: 10px 0;
-}
-
 .couple-photo {
     width: 100%;
     max-width: 400px;
@@ -73,6 +66,8 @@ h3 {
     font-size: 3.5em;
     font-weight: bold;
     color: #333;
+    font-family: 'Great Vibes', cursive;
+    margin: 10px 0;
 }
 
 p {
@@ -289,7 +284,8 @@ button:hover {
     }
 
     h2 {
-        font-size: 1.5em;
+        font-size: 1.9em;
+        font-family: 'Great Vibes', cursive;
     }
 
     button {

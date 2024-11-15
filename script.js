@@ -107,20 +107,18 @@ progreso.addEventListener("change", function () {
 });
 
 // Mostrar el popup al cargar la página
-document.getElementById("open-button").addEventListener("click", function() {
-    // Add the "opened" class to trigger the opening animation
+document.getElementById("open-button").addEventListener("click", function () {
     document.getElementById("envelope-popup").classList.add("opened");
     cancion.play();
-        iconoControl.classList.add("bi-pause-fill");
-        iconoControl.classList.remove("bi-play-fill");
-    
-    // Wait for the animation to complete before showing the main content
+    iconoControl.classList.add("bi-pause-fill");
+    iconoControl.classList.remove("bi-play-fill");
+
     setTimeout(() => {
-      document.getElementById("envelope-popup").style.display = "none";
-      document.getElementById("main-content").classList.remove("hidden");
-      document.body.style.overflow = "auto"; // Allow scrolling after pop-up
-    }, 1200); // Animation duration in CSS
-  });
+        document.getElementById("envelope-popup").style.display = "none";
+        document.getElementById("main-content").classList.remove("hidden");
+        document.body.style.overflow = "auto";
+    }, 1200);
+});
 
 // Botón para guardar en calendario
 document.getElementById('calendar-btn').addEventListener('click', function () {

@@ -188,8 +188,9 @@ p {
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 2em;
     color: #333;
+    font-family: 'Great Vibes', cursive;
 }
 
 .icon {

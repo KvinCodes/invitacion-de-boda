@@ -248,7 +248,7 @@ button:hover {
 .countdown-container {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 6px;
     flex-wrap: wrap; 
     width: 100%;
     box-sizing: border-box;
@@ -285,12 +285,12 @@ button:hover {
 /* Ajustes para pantallas más pequeñas */
 @media (max-width: 768px) {
     .countdown-container {
-        justify-content: space-evenly;
+        justify-content: center;
     }
 
     .countdown-element {
         width: 20%; 
-        min-width: 75px; 
+        min-width: 70px; 
         margin-bottom: 10px; 
     }
 

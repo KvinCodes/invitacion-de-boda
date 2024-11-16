@@ -32,6 +32,7 @@ const countdownFunction = setInterval(function () {
     // Si la cuenta regresiva termina
     if (distance < 0) {
         clearInterval(countdownFunction);
+        document.getElementById("countdown-title").innerHTML = ' ';
         document.getElementById("countdown").innerHTML = '<p style=\'font-family: "Great Vibes", cursive; font-size: 2em;\'>¡Gracias por ser parte del comienzo de nuestra historia!</p>';
     }
 }, 1000);

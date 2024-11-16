@@ -231,6 +231,9 @@ button:hover {
     padding: 20px;
     background-color: rgba(237, 207, 182, 0.5);
     border-radius: 10px;
+    margin: 0 auto;
+    width: 95%;
+    max-width: 600px;
 }
 
 /* Título */
@@ -246,12 +249,14 @@ button:hover {
     display: flex;
     justify-content: center;
     gap: 15px;
+    flex-wrap: wrap; 
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Estilo de cada elemento de la cuenta regresiva */
 .countdown-element {
     background-color: rgba(237, 207, 182, 0.8);
-    /* Marrón claro */
     padding: 20px 10px;
     border-radius: 10px;
     width: 70px;
@@ -259,6 +264,8 @@ button:hover {
     flex-direction: column;
     align-items: center;
     font-family: 'Arial', sans-serif;
+    box-sizing: border-box; 
+    min-width: 60px; 
 }
 
 /* Estilo del número */
@@ -274,6 +281,28 @@ button:hover {
     margin-top: 5px;
     color: #FFFFFF;
 }
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .countdown-container {
+        justify-content: space-evenly;
+    }
+
+    .countdown-element {
+        width: 20%; 
+        min-width: 75px; 
+        margin-bottom: 10px; 
+    }
+
+    .countdown-wrapper {
+        padding: 10px;
+    }
+
+    .countdown-wrapper h2 {
+        font-size: 20px; 
+    }
+}
+
 
 
 /* Alineación centrada de los íconos y texto */

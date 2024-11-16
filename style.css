@@ -7,11 +7,9 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    /* Cambiar a min-height */
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    /* Cambiar center a flex-start para evitar el corte superior */
 }
 
 .invitation-wrapper {
@@ -21,25 +19,20 @@ body {
     height: 100%;
     width: 100%;
     padding: 10px;
-    /* Agregar un poco de espacio superior */
 }
 
 .invitation {
     width: 800px;
     padding: 60px 40px;
-    /* Aumentar el padding superior para evitar el corte */
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     background-image: url('img/fondo2.jpeg');
-    /* Fondo de la invitación */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
     margin: 20px auto;
-    /* Asegurar margen en pantallas pequeñas */
     border-radius: 10px;
-    /* Bordes redondeados */
 }
 
 .couple-photo {
@@ -50,9 +43,7 @@ body {
     display: block;
     border: 8px solid #edcfb6;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra suave */
     border-radius: 10px;
-    /* Bordes redondeados */
     transition: all 0.3s ease;
 }
 
@@ -101,8 +92,6 @@ p {
     width: 380px;
     padding: 5px 30px;
     border-radius: 20px;
-    /* background-color: rgba(228, 228, 228, 0.5); */
-    /* margin-bottom: 0px; */
 }
 
 .reproductor-musica h1 {
@@ -145,21 +134,16 @@ p {
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
-    /* Espaciado entre los dos tiempos */
     margin-top: 10px;
-    /* Espacio entre la barra y los tiempos */
     margin-bottom: 0;
     font-size: 0.9rem;
-    /* Tamaño del texto */
     color: #333;
-    /* Color del texto */
 }
 
 #tiempoActual,
 #duracionTotal {
     /* width: 50%; Cada tiempo ocupa la mitad del espacio */
     text-align: center;
-    /* Centrar el texto */
 }
 
 
@@ -167,7 +151,6 @@ p {
     aspect-ratio: 1/1;
     margin-bottom: 40px;
     background-color: transparent;
-    /* color: #fff; */
     border-radius: 50%;
     padding: 5px;
     outline: 0;
@@ -227,7 +210,6 @@ button:hover {
 
 .highlight {
     background-color: #edcfb6;
-    /* Color rojo para destacar */
 }
 
 .highlight:hover {
@@ -247,7 +229,7 @@ button:hover {
     font-family: Arial, sans-serif;
     color: #080808;
     padding: 20px;
-    background-color: rgba(237, 207, 182, 0.5); /* Fondo semitransparente */
+    background-color: rgba(237, 207, 182, 0.5);
     border-radius: 10px;
 }
 
@@ -268,7 +250,8 @@ button:hover {
 
 /* Estilo de cada elemento de la cuenta regresiva */
 .countdown-element {
-    background-color: rgba(237, 207, 182, 0.8); /* Marrón claro */
+    background-color: rgba(237, 207, 182, 0.8);
+    /* Marrón claro */
     padding: 20px 10px;
     border-radius: 10px;
     width: 70px;
@@ -302,7 +285,6 @@ button:hover {
 
 .details .icon {
     margin-bottom: 5px;
-    /* Ajuste del margen entre icono y texto */
 }
 
 /* Responsividad */
@@ -348,7 +330,6 @@ button:hover {
         font-size: 1.5em;
     }
 
-    /* Corregir espacio superior para pantallas pequeñas */
     .invitation {
         margin-top: 30px;
     }
@@ -382,7 +363,6 @@ button:hover {
         font-size: 1.6em;
     }
 
-    /* Ajustar margen superior en pantallas muy pequeñas */
     .invitation {
         margin-top: 20px;
     }
@@ -402,7 +382,6 @@ button:hover {
     width: 100vw;
     height: 100vh;
     background-color: #f5f5f0;
-    /* Similar to the envelope color */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -477,7 +456,6 @@ button:hover {
     font-size: 12px;
     white-space: nowrap;
     animation: fadeIn 0.5s ease-in-out 2s forwards;
-    /* Animación con retraso */
 }
 
 @keyframes fadeIn {
@@ -578,8 +556,6 @@ button:hover {
         }
     }
 }
-
-
 
 /* Estilo para la sección de recomendaciones */
 .event-info {

@@ -9,10 +9,6 @@ const cancion = document.getElementById("cancion");
 const iconoControl = document.getElementById("iconoControl");
 const botonReproducirPausar = document.querySelector(".controles .boton-reproducir-pausar");
 
-// Elementos para mostrar el tiempo
-const tiempoActual = document.getElementById("tiempoActual");
-const duracionTotal = document.getElementById("duracionTotal");
-
 // Fecha de la boda
 const weddingDate = new Date("December 29, 2024 16:00:00").getTime();
 
@@ -27,8 +23,11 @@ const countdownFunction = setInterval(function () {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Mostrar el resultado
-    document.getElementById("countdown").innerHTML = days + " días " + hours + " horas " + minutes + " minutos " + seconds + " segundos";
+    // Mostrar el resultado en los elementos correspondientes
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
 
     // Si la cuenta regresiva termina
     if (distance < 0) {
@@ -38,7 +37,7 @@ const countdownFunction = setInterval(function () {
 }, 1000);
 
 // Mostrar la fecha exacta de la boda
-document.getElementById("wedding-date").innerHTML = "<strong>Día de la boda: Domingo, 29 de Diciembre, 2024 <br> 04:00 PM</strong>";
+document.getElementById("wedding-date").innerHTML = "<strong>Día de la boda: Domingo, 29 de Diciembre, 2024 <br>Hora: 04:00 PM</strong>";
 
 const canciones = [
     {

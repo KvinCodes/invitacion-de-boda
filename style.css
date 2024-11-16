@@ -190,7 +190,6 @@ p {
 h2 {
     font-size: 2em;
     color: #333;
-    font-family: 'Great Vibes', cursive;
 }
 
 .icon {
@@ -242,6 +241,58 @@ button:hover {
     color: #555;
 }
 
+/* Contenedor principal */
+.countdown-wrapper {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #080808;
+    padding: 20px;
+    background-color: rgba(237, 207, 182, 0.5); /* Fondo semitransparente */
+    border-radius: 10px;
+}
+
+/* Título */
+.countdown-wrapper h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+/* Estilo del contenedor de cuenta regresiva */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Estilo de cada elemento de la cuenta regresiva */
+.countdown-element {
+    background-color: rgba(237, 207, 182, 0.8); /* Marrón claro */
+    padding: 20px 10px;
+    border-radius: 10px;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilo del número */
+.countdown-element span {
+    font-size: 36px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+/* Estilo de la etiqueta */
+.label {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #FFFFFF;
+}
+
+
 /* Alineación centrada de los íconos y texto */
 .details div {
     display: flex;
@@ -286,7 +337,6 @@ button:hover {
 
     h2 {
         font-size: 1.9em;
-        font-family: 'Great Vibes', cursive;
     }
 
     button {
